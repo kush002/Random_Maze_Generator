@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hidden{
+            display: none !important;
+        }
+
+        h1{
+            color: antiquewhite;
+            font-size: 75px;
+        }
+
+        .winner{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .level{
+            display: flex;
+            background-color: aliceblue;
+            height: 500px;
+            width: 500px;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1;
+            /* opacity: 0.5; */
+            /* height: 100vh;
+            width: 100vw;*/
+         }
+    </style>
+</head>
+<body>
+    <!-- <div class="level">
+            <label for="cars">Choose Your Level:</label>
+            <select id="levels" name="levels">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+            <input type="submit">
+          
+    </div> -->
+    <div class="winner hidden">
+        <h1>You Win!</h1><br>
+        <button onClick="window.location.reload()">Play Again</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
